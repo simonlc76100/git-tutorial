@@ -10,6 +10,7 @@ def guess_loop():
     
     # guess counter
     count = 0
+    limit = 10
     
     print("I have in mind a number in between 1 and 100, can you find it?")
  
@@ -21,6 +22,11 @@ def guess_loop():
             
             # increase counter by 1 at the beginning of each loop iteration
             count=count+1
+            
+            # if the user reaches the limit, warn him/her of his/her failure and exit the game
+            if count==limit:
+                print("Noob ! You failed to find the number !")
+                return
  
             # Compare it to the number to guess
             if guess > number_to_guess:
