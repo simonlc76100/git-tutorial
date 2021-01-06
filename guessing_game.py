@@ -14,7 +14,7 @@ def guess_loop():
     
     print("I have in mind a number in between 1 and 100, can you find it?")
  
-    # Replay the question until the user finds the correct number
+    # Replay the question until the user finds the correct number or reaches the limit
     while True:
         try:
             # Read the number the user inputs
