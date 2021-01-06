@@ -1,5 +1,5 @@
 #! /usr/bin/python3
- 
+
 # The random package is needed to choose a random number
 import random
  
@@ -7,6 +7,10 @@ import random
 def guess_loop():
     # This is the number the user will have to guess, chosen randomly in between 1 and 100
     number_to_guess = random.randint(1, 100)
+    
+    # guess counter
+    count = 0
+    
     print("I have in mind a number in between 1 and 100, can you find it?")
  
     # Replay the question until the user finds the correct number
@@ -14,6 +18,9 @@ def guess_loop():
         try:
             # Read the number the user inputs
             guess = int(input())
+            
+            # increase counter by 1 at the beginning of each loop iteration
+            count=count+1
  
             # Compare it to the number to guess
             if guess > number_to_guess:
@@ -22,7 +29,7 @@ def guess_loop():
                 print("The number to guess is higher")
             else:
                 # The user found the number to guess, let's exit
-                print("You just found the number, it was indeed", guess)
+                print("You just found the number, it was indeed", guess ,"and it took you", count ,"guesses to succeed!")
                 return
         # A ValueError is raised by the int() function if the user inputs something else than a number
         except ValueError as err:
