@@ -8,7 +8,7 @@ def guess_loop():
     # This is the number the user will have to guess, chosen randomly in between 1 and 100
     number_to_guess = random.randint(1, 100)
     
-    # guess counter
+    # guess counter and limit
     count = 0
     limit = 10
     
