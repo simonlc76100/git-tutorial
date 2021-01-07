@@ -46,9 +46,9 @@ def guess_loop():
     os.system("clear")
         
     if difficulty==5:
-        print("\nI have in mind a number in between 1 and 100, can you find it?\nYou only have 1 guess available\n")
+        print("\nI have in mind a number in between 1 and 100, can you find it ?\nYou only have 1 guess available\n")
     else:
-        print("\nI have in mind a number in between 1 and 100, can you find it?\nYou have", limit ,"guesses available\n")
+        print("\nI have in mind a number in between 1 and 100, can you find it ?\nYou have", limit ,"guesses available\n")
  
     # Replay the question until the user finds the correct number or reaches the limit
     while True:
@@ -64,7 +64,7 @@ def guess_loop():
                     # if the user find the correct number, exit the game
                     if guess==number_to_guess:
                         os.system("clear")
-                        print("\nYou just found the number, it was indeed", guess ,"and it took you 1 guess to succeed!")
+                        print("\nYou just found the number, it was indeed", guess ,"and it took you 1 guess to succeed !")
                         return
                     else:
                         # if the user reaches the limit, warn him/her of his/her failure and exit the game
@@ -84,12 +84,12 @@ def guess_loop():
                         # condition in case the user find the number in only one guess when he/she has multiple guesses
                         if count==1:
                             os.system("clear")
-                            print("\nYou just found the number, it was indeed", guess ,"and it took you 1 guess to succeed!")
+                            print("\nYou just found the number, it was indeed", guess ,"and it took you 1 guess to succeed !")
                             return
                         # condition in case the user uses more than one guess to find the correct number
                         else:
                             os.system("clear")
-                            print("\nYou just found the number, it was indeed", guess ,"and it took you", count ,"guesses to succeed!")
+                            print("\nYou just found the number, it was indeed", guess ,"and it took you", count ,"guesses to succeed !")
                             return
                         
                 # increase counter by 1 at the end of each loop iteration    
